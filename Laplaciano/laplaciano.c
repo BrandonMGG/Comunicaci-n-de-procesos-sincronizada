@@ -86,3 +86,7 @@ int main() {
     ejecutar_filtro_laplaciano("imagen_original.jpg");
     return 0;
 }
+
+
+// Para ejecutar en Linux:
+// clear && gcc -o laplaciano laplaciano.c -lfreeimage -lm && ./laplaciano
