@@ -1,0 +1,50 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst platform.seven_seg3 -pg 1 -lvl 3 -y 1390
+preplace inst platform.ROM -pg 1 -lvl 3 -y 630
+preplace inst platform.BTN_1 -pg 1 -lvl 3 -y 130
+preplace inst platform.seven_seg4 -pg 1 -lvl 3 -y 1490
+preplace inst platform.RAM -pg 1 -lvl 3 -y 810
+preplace inst platform.BTN_2 -pg 1 -lvl 3 -y 430
+preplace inst platform.seven_seg5 -pg 1 -lvl 3 -y 1590
+preplace inst platform.SWITCH -pg 1 -lvl 3 -y 890
+preplace inst platform.CPU.clock_bridge -pg 1
+preplace inst platform.BTN_3 -pg 1 -lvl 3 -y 530
+preplace inst platform.pio_0 -pg 1 -lvl 3 -y 990
+preplace inst platform.CPU.cpu -pg 1
+preplace inst platform -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst platform.timer_0 -pg 1 -lvl 3 -y 230
+preplace inst platform.SWITCH2 -pg 1 -lvl 3 -y 710
+preplace inst platform.BTN -pg 1 -lvl 3 -y 1690
+preplace inst platform.SWITCH3 -pg 1 -lvl 2 -y 450
+preplace inst platform.seven_seg0 -pg 1 -lvl 3 -y 1090
+preplace inst platform.CPU.reset_bridge -pg 1
+preplace inst platform.CPU -pg 1 -lvl 2 -y 630
+preplace inst platform.seven_seg1 -pg 1 -lvl 3 -y 1190
+preplace inst platform.seven_seg2 -pg 1 -lvl 3 -y 1290
+preplace inst platform.clk_0 -pg 1 -lvl 1 -y 830
+preplace inst platform.BTN_0 -pg 1 -lvl 3 -y 30
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.btn_3_external_connection,(SLAVE)BTN_3.external_connection) 1 0 3 NJ 560 NJ 560 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)clk_0.clk_in,(SLAVE)platform.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)seven_seg2.s1,(SLAVE)BTN_3.s1,(SLAVE)seven_seg5.s1,(MASTER)CPU.data_master,(SLAVE)seven_seg1.s1,(SLAVE)BTN_0.s1,(SLAVE)pio_0.s1,(SLAVE)seven_seg0.s1,(SLAVE)BTN_2.s1,(SLAVE)SWITCH.s1,(SLAVE)BTN.s1,(SLAVE)timer_0.s1,(SLAVE)SWITCH2.s1,(SLAVE)RAM.s1,(SLAVE)BTN_1.s1,(SLAVE)seven_seg3.s1,(SLAVE)seven_seg4.s1) 1 2 1 790
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.seven_seg2_external_connection,(SLAVE)seven_seg2.external_connection) 1 0 3 NJ 1320 NJ 1320 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.switch3_external_connection,(SLAVE)SWITCH3.external_connection) 1 0 2 NJ 480 NJ
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)seven_seg0.reset,(SLAVE)BTN_0.reset,(SLAVE)pio_0.reset,(SLAVE)seven_seg5.reset,(SLAVE)timer_0.reset,(SLAVE)BTN_3.reset,(SLAVE)SWITCH2.reset,(SLAVE)seven_seg4.reset,(SLAVE)BTN_1.reset,(SLAVE)seven_seg2.reset,(SLAVE)SWITCH.reset,(SLAVE)BTN_2.reset,(SLAVE)BTN.reset,(SLAVE)ROM.reset1,(MASTER)clk_0.clk_reset,(SLAVE)CPU.reset,(SLAVE)SWITCH3.reset,(SLAVE)seven_seg1.reset,(SLAVE)RAM.reset1,(SLAVE)seven_seg3.reset) 1 1 2 430 1740 810
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)seven_seg1.external_connection,(SLAVE)platform.seven_seg1_external_connection) 1 0 3 NJ 1220 NJ 1220 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.btn_external_connection,(SLAVE)BTN.external_connection) 1 0 3 NJ 1720 NJ 1720 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)platform.reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>platform</net_container>(MASTER)CPU.irq,(SLAVE)timer_0.irq) 1 2 1 770
+preplace netloc FAN_OUT<net_container>platform</net_container>(SLAVE)seven_seg2.clk,(SLAVE)CPU.clk,(SLAVE)seven_seg3.clk,(SLAVE)BTN_0.clk,(SLAVE)seven_seg0.clk,(SLAVE)BTN_2.clk,(SLAVE)timer_0.clk,(SLAVE)SWITCH.clk,(SLAVE)BTN.clk,(SLAVE)BTN_3.clk,(SLAVE)SWITCH3.clk,(SLAVE)seven_seg4.clk,(SLAVE)pio_0.clk,(SLAVE)BTN_1.clk,(SLAVE)RAM.clk1,(SLAVE)SWITCH2.clk,(SLAVE)ROM.clk1,(SLAVE)seven_seg1.clk,(SLAVE)seven_seg5.clk,(MASTER)clk_0.clk) 1 1 2 410 1640 730
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.btn_2_external_connection,(SLAVE)BTN_2.external_connection) 1 0 3 NJ 750 NJ 750 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.btn_1_external_connection,(SLAVE)BTN_1.external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc POINT_TO_POINT<net_container>platform</net_container>(MASTER)CPU.instruction_master,(SLAVE)ROM.s1) 1 2 1 N
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)seven_seg5.external_connection,(SLAVE)platform.seven_seg5_external_connection) 1 0 3 NJ 1620 NJ 1620 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.seven_seg4_external_connection,(SLAVE)seven_seg4.external_connection) 1 0 3 NJ 1520 NJ 1520 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)pio_0.external_connection,(SLAVE)platform.pio_0_external_connection) 1 0 3 NJ 1020 NJ 1020 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.leds_external_connection,(SLAVE)seven_seg0.external_connection) 1 0 3 NJ 1120 NJ 1120 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)BTN_0.external_connection,(SLAVE)platform.btn_0_external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.switch_external_connection,(SLAVE)SWITCH.external_connection) 1 0 3 NJ 920 NJ 920 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)SWITCH2.external_connection,(SLAVE)platform.switch2_external_connection) 1 0 3 NJ 770 NJ 770 NJ
+preplace netloc EXPORT<net_container>platform</net_container>(SLAVE)platform.seven_seg3_external_connection,(SLAVE)seven_seg3.external_connection) 1 0 3 NJ 1420 NJ 1420 NJ
+levelinfo -pg 1 0 200 1040
+levelinfo -hier platform 210 240 490 880 1030
